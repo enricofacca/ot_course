@@ -1,0 +1,134 @@
+\documentclass{article}
+% General document formatting
+\usepackage[margin=0.7in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+
+\newcommand{\REAL}{ \mathbb{R}}
+
+% Related to math
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\begin{document}
+
+Name, date, X Exercise
+
+\section{Optimization}
+
+\begin{itemize}
+\item Existence
+\item Characterization
+\item Regularity
+\end{itemize}
+
+
+\subsection{Real Optimization}
+$f:\REAL \to \REAL$
+\begin{itemize}
+\item Weistrass: compactness + (lower semi-) continuity
+\item \textbf{Coercivity}: $\lim_{|x|\to \infty} f(x)=+\infty$
+\item $\Omega\subset \REAL^n$ $f:\Omega\to \REAL$ + continuity + differentiable
+\item $f'(x)=0$
+\item $f''(x)>0$
+\end{itemize}
+
+\subsection{Functional Optimization}
+\begin{itemize}
+  \item Compactness
+  \item Weistrass
+  \item Derivate in infinite dimensional spaces
+  \item $F:L^2(\Omega)\to \REAL$ $F(u)=\int_{\Omega}u^2(x)dx$
+  \item Euler-Lagrange Equations
+\end{itemize}
+
+\subsection{Lagrangian Optimization}
+\begin{itemize}
+  \item $\min_{u\in X} \int_{\Omega}L(\nabla u(x), u(x) ,x)dx$
+\item Lack of compactness
+\item \textbf{Coercivity} Evans or Ekeland
+\item Existence condition
+\item Weak Euler-Lagrange
+\end{itemize}
+
+\subsection{Lagrange and Poisson equations}
+\begin{itemize}
+\item Variational formulation of Laplace equation
+\item Strong vs Weak
+\item Variational formulation of Poisson equation
+ \item $p$-Laplacian
+\end{itemize}
+
+\section{Constraint optimization}
+
+\section{Constraint optimization in finite dimension}
+\begin{itemize}
+  \item  $min f(x)$ s.t. $g(x)\leq 0 $ $f:\REAL^n\to \REAL$ and $g:\REAL^n\to \REAL^2$
+  \item Lagrange Multiplier (given + reference to Ekeland chapete 2 section 5)
+  \item Linear Programming
+  \item dual < primal and KKT
+\end{itemize}
+
+\section{Constraint optimization in infinite dimension}
+\begin{itemize}
+\item Congested flow
+\item Duality of Ekelend $\min_{u} F(u) + G(\Lambda u)=\sup_{p^*}F^*(\Lambda^* p^*)+G(p^*)$
+\end{itemize}
+
+\section{Optimal transport}
+
+\subsection{General case}
+\begin{itemize}
+\item Monge Formulation
+\item Kantorovich Discrete
+\item Kantorovich Continuous
+\item Existence
+\item Wasserstein (Kantorovich-Rubistein) Distance
+  \begin{itemize}
+  \item Properties
+  \item Application
+  \end{itemize}
+\item $c$-tranform
+\end{itemize}
+
+\subsection{$c(x,y)=|x-y|$}
+\begin{itemize}
+\item Lipschtiz
+\item Constrain optimization
+\item Beckmann
+\item Monge-Kantorovich equations
+\item Link with $p$-Laplacian and $q$-congested
+\end{itemize}
+
+
+\subsection{$c(x,y)=|x-y|^2/2$}
+\begin{itemize}
+\item Monge Ampere
+\item Existence of the Brenier Map
+\item Counter-example p=1 p=2 on circles
+\item Brenier-Benamou dynamical
+\item PDE-form
+  \item Crossing trajectories
+  \item Link with HJ equations
+    \item Counterexample \cite{SANTAMBROGIO2016152} 
+\end{itemize}
+
+\subsection{Gradient flow in $W^2$}
+\begin{itemize}
+\item De-Giorgi
+\item Otto calculus
+\item Examples
+\end{itemize}
+
+\section{Bonus - Numerics}
+\begin{itemize}
+\item Sinkhorn
+\item PDE-based
+\end{itemize}
+
+\section{Bonus- Branch transport}
+
+\bibliographystyle{unsrt}%dcu}
+\bibliography{biblio}
+\end{document}
